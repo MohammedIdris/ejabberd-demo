@@ -8,7 +8,7 @@ xmpp.on ("online", data => {
 
 function send () {
     setTimeout(send, 5000);
-    xmpp.send("ejbadmin2@msfbharat.org", `hi! ${Date.now()}`)
+    xmpp.send("ejbadmin2@msg.msfbharat.org", `hi! ${Date.now()}`)
 }
 xmpp.on("error", error => 
     console.log(`something went wrong!${JSON.stringify(error)} `))
@@ -18,8 +18,8 @@ xmpp.on("chat", (from, message)=>{
 })
 
 xmpp.connect({
-    "jid": "ejbadmin1@msfbharat.org",
+    "jid": "ejbadmin1@msg.msfbharat.org",
     "password": "ejbadmin1pwd",
-    "host": "msfbharat.org",
+    "host": "msg.msfbharat.org",
     "port": 5222
 } )
